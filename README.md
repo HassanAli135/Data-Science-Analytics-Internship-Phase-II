@@ -11,9 +11,9 @@ Approach:
 Loaded and explored the dataset using .info(), .describe(), and .value_counts()
 Visualized key features: age distribution, job type, and contact method vs. subscription outcome
 Encoded all categorical features using Label Encoding
-Trained two classification models: Logistic Regression (baseline) and Random Forest
+Trained two classification models — Logistic Regression (baseline) and Random Forest
 Evaluated using Confusion Matrix, F1-Score, and ROC Curve
-Applied SHAP values to explain at least 5 individual model predictions (Explainable AI)
+Applied SHAP values to explain individual model predictions (Explainable AI — XAI)
 
 Key Libraries: pandas numpy scikit-learn matplotlib seaborn shap
 
@@ -23,7 +23,7 @@ Approach:
 
 Conducted full EDA — explored income vs. spending score and gender distribution
 Scaled features using StandardScaler to ensure equal contribution to clustering
-Used the Elbow Method to determine the optimal number of clusters (K=5)
+Used the Elbow Method to determine the optimal number of clusters (K = 5)
 Applied K-Means Clustering to segment customers into 5 distinct groups
 Used PCA to reduce dimensions and visualize clusters in 2D
 Proposed data-driven marketing strategies for each cluster:
@@ -32,7 +32,7 @@ ClusterProfileStrategy0High Income, High SpendingPremium products & loyalty prog
 Key Libraries: pandas numpy scikit-learn matplotlib seaborn
 
 📌 Task 3 — Energy Consumption Forecasting
-DatasetPJME Hourly Energy Consumption DatasetObjectiveForecast short-term household energy usage using historical time-based patterns
+DatasetPJME Hourly Energy Consumption DatasetObjectiveForecast short-term energy usage using historical time-based patterns
 Approach:
 
 Parsed datetime index and set it as the time series reference
@@ -48,18 +48,18 @@ MetricDescriptionMAEMean Absolute Error — average prediction errorRMSERoot Mea
 Key Libraries: pandas numpy xgboost scikit-learn matplotlib
 
 📌 Task 4 — Loan Default Risk with Business Cost Optimization
-DatasetHome Credit Default Risk DatasetObjectivePredict the likelihood of a loan default and optimize the decision threshold based on cost-benefit analysis
+DatasetHome Credit Default Risk DatasetObjectivePredict loan default likelihood and optimize the decision threshold based on cost-benefit analysis
 Approach:
 
 Cleaned dataset by filling missing values with column medians
 Encoded categorical features using Label Encoding
 Trained a Logistic Regression model for binary default classification
 Visualized results using a Confusion Matrix heatmap
-Defined real financial costs for prediction errors:
+Defined real financial costs for each type of prediction error:
 
 Error TypeScenarioCostFalse PositiveApproving a risky customerRs. 10,000 lossFalse NegativeRejecting a good customerRs. 2,000 opportunity loss
 
-Swept decision thresholds from 0.1 to 0.9 and calculated total business cost at each threshold to find the optimal cutoff point
+Swept decision thresholds from 0.1 to 0.9 to find the optimal cutoff that minimizes total business cost
 
 Key Libraries: pandas numpy scikit-learn matplotlib seaborn
 
